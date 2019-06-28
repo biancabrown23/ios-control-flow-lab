@@ -18,20 +18,20 @@ let conditionOne = !(4 < 5) || !(3 > 8)
 let conditionTwo = !(!true)
 
 if conditionOne {
- print("A")
+print("A")
 } else if conditionTwo {
- print("B")
+print("B")
 }
 if conditionTwo {
- print("C")
+print("C")
 }
 print("D")
 ```
 
-- A
-- B
-- C
-- D
+- A // this was printed out 
+- B // this was not printed out
+- C // this was printed out 
+- D // this was printed out
 
 ***
 ## Question 2
@@ -41,17 +41,17 @@ What will the code block below print?  Select all that apply:
 ```swift
 let appInfo = (name: "myCoolApp", version: 0.4)
 switch appInfo {
- case (_, 0.0..<1.0):
- print("\(appInfo.0) hasn't released yet")
- case ("myCoolApp", _):
- print("Thanks for looking at myCoolApp!")
- default:
- print("I'm not quite sure what you are looking at")
+case (_, 0.0..<1.0):
+print("\(appInfo.0) hasn't released yet")
+case ("myCoolApp", _):
+print("Thanks for looking at myCoolApp!")
+default:
+print("I'm not quite sure what you are looking at")
 }
 ```
 
-- appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
+- appInfo.0 hasn't released yet 
+- myCoolApp hasn't released yet // this is the answer here.
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
@@ -65,20 +65,20 @@ What will be printed to the console when the code below is run?  Select all that
 let x: Int = 4
 switch x {
 case 0..<4:
- print("A")
+print("A")
 case 5..<10:
- print("B")
+print("B")
 case is Double:
- print("C")
+print("C")
 default:
- print("D")
+print("D")
 }
 ```
 
 - A
 - B
 - C
-- D
+- D // this is the answer but I had also noticed that when I ran this, it stated that the type double always fails
 
 ***
 ## Question 4
@@ -90,17 +90,17 @@ let candyType : String = "skittles"
 
 switch candyType {
 case "mAndM":
- print("Melts in your mouth, not in your hand")
+print("Melts in your mouth, not in your hand")
 case "skittles":
- print("Taste the rainbow")
+print("Taste the rainbow")
 case "snickers":
- print("Hungry? Grab a Snickers")
+print("Hungry? Grab a Snickers")
 }
 ```
 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
-- No default case in the switch statement
+- No default case in the switch statement // This is the answer 
 - No print statement right outside the switch statement
 
 ***
@@ -111,7 +111,16 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
+// 
+
+switch currentWeather {
+case "rain":
+print("decent day")
+case "snow":
+print("dont leave your house")
+default:
+print("go away")
+}
 ```
 
 ***
@@ -123,7 +132,12 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
-// enter code below
+//
+
+var fullName = "\(firstName) \(lastName)"
+
+"The Fellow's full name is \(fullName)"
+
 ```
 
 ***
